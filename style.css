@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+html{
+    heigh: 100%;
+}
+
+body{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 32px;
+    background-color: beige;
+    font-family: "Open Sans";
+    animation: rotate 8s infinite alternate linear;
+}
+
+.circle{
+    
+}
