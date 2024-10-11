@@ -1,25 +1,187 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-*{
+* {
     box-sizing: border-box;
 }
-html{
-    heigh: 100%;
+html {
+    height: 70%;
 }
 
-body{
+body {
     height: 100%;
     display: grid;
     place-items: center;
     margin: 0;
-    padding: 0 32px;
-    background-color: beige;
+    padding: 0 30px;
+    background-color: #fafbfc;
     font-family: "Open Sans";
     animation: rotate 8s infinite alternate linear;
+    overflow: hidden;
 }
 
-.circle{
-    
+.circle {
+    position: fixed;
+    top: -50vmin;
+    left: -50vmin;
+    width: 100vmin;
+    height: 100vmin;
+    border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+    background: #2b3137;
 }
 
-/*PEPEGO*/
+.circle::after {
+    content: "";
+    position: inherit;
+    right: -50vmin;
+    bottom: -50vmin;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: #24292e;
+}
+
+.card {
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    width: 42%;
+    margin: 0 20px;
+    padding: 150px 0 50px;
+    border-radius: 1.25rem;
+    background: #e3e5e7;
+    text-align: center;
+    box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    background: rgb(255, 123, 50);
+    top: -890px;
+    left: 50%;
+    width: 900px;
+    height: 1100px;
+    border-radius: 15%;
+    translate: -50% 0;
+    transition: transform 1s ease, width 0.8s ease, height 3s ease;
+    z-index: -1;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 0 120px 120px rgb(0 0 0 / 40%);
+}
+
+.card:hover::before {
+    transform: translate(0, 100px) scale(1.27);
+    background: rgb(255, 123, 50);
+}
+
+.card .logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e3e5e7;
+    height: 120px;
+    width: 120px;
+    top: 30px;
+    left: 50%;
+    translate: -50% 0;
+}
+
+.card .logo i {
+    font-size: 50px;
+    color: #24292e;
+    font-weight: 500;
+}
+
+.card > h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 40px;
+    color: #24292e;
+}
+
+.card input {
+    width: 60%;  /* Adjusts the input width */
+    margin: 5px auto;  /* Centers the input fields */
+    padding: 15px;  /* Adds padding for better appearance */
+    border-radius: 15px;  /* Rounds the corners */
+    font-size: 16px;  /* Sets the font size */
+    font-weight: 800;
+    border: 1px solid transparent; /* Removes visible border */
+    background-color: #ffffff; /* Sets a background color */
+}
+
+
+.card button{
+    width: 20%; 
+    margin: 10px auto;  
+    padding: 10px;  
+    border: 2px solid #2b3137;
+    border-radius: 15px;  
+    font-size: 16px;  
+}
+.form{
+    margin: 0 0 40px;
+    display: grid;
+    gap: 18px;
+}
+
+.form>input{
+    font-family: inherit ;
+    color:#24292e;
+    transition: all 0.4s;
+}
+
+.form>input:hover{
+    border:1px solid #2b3137;
+}
+
+.form>input::placeholder{
+    color: #24292e;
+}
+
+.card input:focus {
+    outline: none;  /* Removes default blue outline */
+    border: 2px solid #24292e;  /* Changes border to a bright color, for example */
+    box-shadow: 0 0 5px rgba(255, 144, 0, 0.6);  /* Adds a subtle glow effect */
+}
+
+.form>button{
+    cursor: pointer;
+    padding: 0 20;
+    background: #2b3137;
+    color: rgb(255, 145, 0);
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.4s;
+}
+
+.form>button:hover{
+    color: #fafbfc;
+}
+
+.card>footer{
+    color: #2b3137;
+    font-size: x-large;
+}
+.card>footer>a{
+    color: #2b3137;
+    transition: all 0.4s;
+}
+
+.card>footer>a:hover{
+    color: blue;
+}
+
+/*@media (width >=500px) {
+    body{
+        padding 0;
+    }
+
+}*/
