@@ -17,6 +17,7 @@ body {
     font-family: "Open Sans";
     animation: rotate 8s infinite alternate linear;
     overflow: hidden;
+    align-items: start;
 }
 
 .circle {
@@ -179,13 +180,13 @@ body {
     color: blue;
 }
 
-@media (min-width:500px) {
-    body{
-        padding: 0;
-    }
-    .login-card{
-        margin: 0;
-        width: 400px
+@media (max-width: 500px) {
+    .card {
+        width: 90%;
+        padding: 50px 20px 30px;
+        margin: 20px auto;
+        position: relative;
+        top: 0;
     }
 }
 
