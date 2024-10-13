@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 70%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    place-items: start; /* Change from center to start */
+    margin: 0;
+    padding: 0 30px; /* Keep horizontal padding */
+    background-color: #fafbfc;
+    font-family: "Open Sans";
+    animation: rotate 8s infinite alternate linear;
+    overflow: hidden;
+}
+
+.card {
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    width: 42%;
+    margin: 20px 0; /* Ensure some margin for vertical spacing */
+    padding: 150px 20px 50px; /* Adjust horizontal padding */
+    border-radius: 1.25rem;
+    background: #e3e5e7;
+    text-align: left; /* Align text to the left */
+    box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+header, footer {
+    text-align: left;
+    padding: 20px; /* Add some padding */
+}
+
+.hero {
+    text-align: left;
+    text-align: center; /* Center-aligns the text */
+    margin: 20px 0; /* Adds margin around the hero section */
+}
+
+.features {
+    text-align: left;
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Gap between features */
+}
+
+.feature {
+    text-align: left;
+    background: #f8f9fa; 
+    padding: 15px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}

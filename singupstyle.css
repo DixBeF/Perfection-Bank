@@ -183,5 +183,13 @@ body {
     body{
         padding 0;
     }
-
+    .login-card{
+        margin: 0;
+        width: 600px
+    }
 }*/
+
+.feedback:empty {
+    display: none;
+}
+
