@@ -14,8 +14,8 @@ nameInput.addEventListener('input', () => {
         nameFeedback.textContent = 'Name is too long. Please enter a valid name.';
         nameFeedback.style.color = 'red';
     } else {
-        nameFeedback.textContent = `You have ${maxLength - currentLength} characters remaining.`;
-        nameFeedback.style.color = 'green';
+        nameFeedback.textContent = `Maximum characters is 30`;
+        nameFeedback.style.color = 'black';
     }
 });
 
